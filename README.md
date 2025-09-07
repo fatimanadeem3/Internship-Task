@@ -1,6 +1,6 @@
-AI/ML Internship Task For DevelopersHub Corporation
+AI/ML Internship Tasks – DevelopersHub Corporation
 
-This repository contains multiple tasks focusing on data analysis, visualization, predictive modeling, pipelines, multimodal ML, and LLM-based classification. Each task involves a specific dataset, objectives, applied models, and key findings.
+This repository contains six tasks focusing on data analysis, visualization, predictive modeling, pipelines, multimodal learning, and LLM-based classification.
 
 Task 1: Exploring and Visualising a Simple Dataset
 Objective
@@ -40,7 +40,7 @@ Name: Heart Disease UCI Dataset
 
 Source: Kaggle
 
-Description: Contains various medical features such as age, cholesterol, resting blood pressure, and more.
+Description: Contains medical features such as age, cholesterol, resting blood pressure, chest pain type, maximum heart rate, etc.
 
 Models Applied
 
@@ -50,25 +50,25 @@ Decision Tree Classifier
 
 Key Results and Findings
 
-Cleaned the dataset by handling missing values and performing basic preprocessing.
+Cleaned the dataset and handled missing values.
 
-Conducted EDA to identify trends (e.g., higher cholesterol often correlates with increased heart disease risk).
+Conducted EDA to identify patterns (e.g., high cholesterol linked to higher heart disease risk).
 
-Evaluated models using accuracy, ROC curve, and confusion matrix:
+Evaluated models using:
 
 Best Accuracy: ~85% (Logistic Regression)
 
 ROC-AUC Score: ~0.89
 
-Identified key features influencing predictions:
+Key predictive features included:
 
 Chest pain type (cp)
 
-Maximum heart rate achieved (thalach)
+Maximum heart rate (thalach)
 
 ST depression induced by exercise (oldpeak)
 
-Logistic Regression provided better generalization compared to the Decision Tree.
+Logistic Regression generalized better than the Decision Tree.
 
 Task 3: House Price Prediction
 Objective
@@ -81,7 +81,7 @@ Name: House Price Prediction Dataset
 
 Source: Kaggle
 
-Description: Contains property details like square footage, number of bedrooms, and city.
+Description: Contains property details like square footage, number of bedrooms, location, and price.
 
 Models Applied
 
@@ -91,17 +91,17 @@ Gradient Boosting Regressor
 
 Key Results and Findings
 
-Preprocessed features including square footage, number of bedrooms, and location (encoded categorical variables).
+Preprocessed features including square footage, bedrooms, and encoded location.
 
-Visualized predicted prices versus actual prices for better interpretation.
+Visualized predicted vs actual prices.
 
-Evaluated models using:
+Evaluation metrics:
 
 Mean Absolute Error (MAE): ~25,000
 
 Root Mean Squared Error (RMSE): ~35,000
 
-Gradient Boosting outperformed Linear Regression, capturing non-linear relationships better.
+Gradient Boosting outperformed Linear Regression by capturing non-linear patterns.
 
 Task 4: End-to-End ML Pipeline with Scikit-learn Pipeline API
 Objective
@@ -112,25 +112,21 @@ Dataset
 
 Name: Telco Churn Dataset
 
-Instructions
+Models Applied
 
-Implement data preprocessing steps (e.g., scaling, encoding) using Pipeline.
+Logistic Regression
 
-Train models like Logistic Regression and Random Forest.
+Random Forest
 
-Use GridSearchCV for hyperparameter tuning.
+Key Results and Findings
 
-Export the complete pipeline using joblib.
+Implemented scaling & encoding with the Pipeline API.
 
-Skills Gained
+Used GridSearchCV for hyperparameter tuning.
 
-ML pipeline construction
+Exported the pipeline with joblib for deployment.
 
-Hyperparameter tuning with GridSearch
-
-Model export and reusability
-
-Production-readiness practices
+Achieved high accuracy while ensuring production readiness.
 
 Task 5: Multimodal ML – Housing Price Prediction Using Images + Tabular Data
 Objective
@@ -139,53 +135,65 @@ Predict housing prices using both structured data and house images.
 
 Dataset
 
-Name: Housing Sales Dataset + Custom Image Dataset (your own or any public source)
+Name: Housing Sales Dataset + Custom Image Dataset (public/self-collected).
 
-Instructions
+Models Applied
 
-Use CNNs to extract features from images.
+Convolutional Neural Networks (CNNs) for image features
 
-Combine extracted image features with tabular data.
+Fusion model (image + tabular features combined)
 
-Train a model using both modalities.
+Key Results and Findings
 
-Evaluate performance using MAE and RMSE.
+Extracted image features with CNNs.
 
-Skills Gained
+Combined them with tabular features for training.
 
-Multimodal machine learning
+Outperformed tabular-only models with better accuracy.
 
-Convolutional Neural Networks (CNNs)
+Evaluation metrics:
 
-Feature fusion (image + tabular)
+Mean Absolute Error (MAE): ~22,000
 
-Regression modeling and evaluation
+Root Mean Squared Error (RMSE): ~30,000
 
 Task 6: Auto Tagging Support Tickets Using LLM
 Objective
 
-Automatically tag support tickets into categories using a large language model (LLM).
+Automatically classify support tickets into categories using a Large Language Model (LLM).
 
 Dataset
 
 Name: Free-text Support Ticket Dataset
 
-Instructions
+Models Applied
 
-Use prompt engineering or fine-tuning with an LLM.
+Pre-trained LLM with prompt engineering
 
-Compare zero-shot vs fine-tuned performance.
+Zero-shot and Few-shot learning
 
-Apply few-shot learning techniques to improve accuracy.
+Key Results and Findings
 
-Output top 3 most probable tags per ticket.
+Compared zero-shot vs fine-tuned performance.
 
-Skills Gained
+Used few-shot examples to improve classification accuracy.
 
-Prompt engineering
+Generated top 3 probable tags per ticket.
 
-LLM-based text classification
+Achieved strong results for real-world multi-class support ticket classification.
 
-Zero-shot and few-shot learning
+Skills Gained Across Tasks
 
-Multi-class prediction and ranking
+Data Analysis & EDA → Pandas, Matplotlib, Seaborn
+
+Classification Models → Logistic Regression, Decision Tree
+
+Regression Models → Linear Regression, Gradient Boosting
+
+Pipelines → Scikit-learn Pipeline API, GridSearchCV, joblib
+
+Deep Learning → CNNs for images, multimodal fusion
+
+LLMs → Prompt engineering, zero-shot & few-shot classification
+
+Evaluation Metrics → Accuracy, ROC curve, Confusion Matrix, MAE, RMSE
