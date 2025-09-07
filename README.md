@@ -1,199 +1,156 @@
-AI/ML Internship Tasks – DevelopersHub Corporation
+# AI/ML Internship Tasks For DevelopersHub Corporation
 
-This repository contains six tasks focusing on data analysis, visualization, predictive modeling, pipelines, multimodal learning, and LLM-based classification.
+This repository contains multiple tasks focusing on data analysis, visualization, predictive modeling, and advanced machine learning approaches. Each task involves a specific dataset, objectives, applied models, and key findings.
 
-Task 1: Exploring and Visualising a Simple Dataset
-Objective
+---
 
+## **Task 1: Exploring and Visualising a Simple Dataset**
+
+### **Objective**
 Understand how to load, inspect, and visualise a dataset to explore trends, distributions, and relationships between features.
 
-Dataset
+### **Dataset**
+- **Name:** Iris Dataset
+- **Format:** CSV (can also be loaded via `seaborn.load_dataset("iris")`)
 
-Name: Iris Dataset
+### **Models Applied**
+- No predictive model applied — this task focuses purely on **Exploratory Data Analysis (EDA)**.
 
-Format: CSV (can also be loaded via seaborn.load_dataset("iris"))
+### **Key Results and Findings**
+- Loaded and inspected the dataset using Pandas (`.shape`, `.head()`, `.info()`, `.describe()`).
+- Generated scatter plots to visualise feature relationships (e.g., petal length vs petal width).
+- Used histograms to understand value distributions.
+- Applied box plots to detect potential outliers.
+- Observed that species have distinct patterns in petal/sepal measurements.
 
-Models Applied
+---
 
-No predictive model applied — this task focuses purely on Exploratory Data Analysis (EDA).
+## **Task 2: Heart Disease Prediction**
 
-Key Results and Findings
-
-Loaded and inspected the dataset using Pandas (.shape, .head(), .info(), .describe()).
-
-Generated scatter plots to visualise feature relationships (e.g., petal length vs petal width).
-
-Used histograms to understand value distributions.
-
-Applied box plots to detect potential outliers.
-
-Observed that species have distinct patterns in petal/sepal measurements.
-
-Task 2: Heart Disease Prediction
-Objective
-
+### **Objective**
 Build and evaluate a machine learning model to predict whether a patient is at risk of heart disease based on their health metrics.
 
-Dataset
+### **Dataset**
+- **Name:** Heart Disease UCI Dataset
+- **Source:** [Kaggle](https://www.kaggle.com/datasets/ketangangal/heart-disease-dataset-uci)
+- **Description:** Contains various medical features such as age, cholesterol, resting blood pressure, and more.
 
-Name: Heart Disease UCI Dataset
+### **Models Applied**
+- Logistic Regression
+- Decision Tree Classifier
 
-Source: Kaggle
+### **Key Results and Findings**
+- Cleaned the dataset by handling missing values and performing basic preprocessing.
+- Conducted EDA to identify trends (e.g., higher cholesterol often correlates with increased heart disease risk).
+- Evaluated models using accuracy, ROC curve, and confusion matrix:
+  - **Best Accuracy:** ~85% (Logistic Regression)
+  - **ROC-AUC Score:** ~0.89
+- Identified key features influencing predictions:
+  - Chest pain type (cp)
+  - Maximum heart rate achieved (thalach)
+  - ST depression induced by exercise (oldpeak)
+- Logistic Regression provided better generalization compared to the Decision Tree.
 
-Description: Contains medical features such as age, cholesterol, resting blood pressure, chest pain type, maximum heart rate, etc.
+---
 
-Models Applied
+## **Task 3: House Price Prediction**
 
-Logistic Regression
-
-Decision Tree Classifier
-
-Key Results and Findings
-
-Cleaned the dataset and handled missing values.
-
-Conducted EDA to identify patterns (e.g., high cholesterol linked to higher heart disease risk).
-
-Evaluated models using:
-
-Best Accuracy: ~85% (Logistic Regression)
-
-ROC-AUC Score: ~0.89
-
-Key predictive features included:
-
-Chest pain type (cp)
-
-Maximum heart rate (thalach)
-
-ST depression induced by exercise (oldpeak)
-
-Logistic Regression generalized better than the Decision Tree.
-
-Task 3: House Price Prediction
-Objective
-
+### **Objective**
 Predict house prices using property features such as size, bedrooms, and location.
 
-Dataset
+### **Dataset**
+- **Name:** House Price Prediction Dataset
+- **Source:** [Kaggle](https://www.kaggle.com/datasets/shree1992/housedata)
+- **Description:** Contains property details like square footage, number of bedrooms, and city.
 
-Name: House Price Prediction Dataset
+### **Models Applied**
+- Linear Regression
+- Gradient Boosting Regressor
 
-Source: Kaggle
+### **Key Results and Findings**
+- Preprocessed features including square footage, number of bedrooms, and location (encoded categorical variables).
+- Visualized predicted prices versus actual prices for better interpretation.
+- Evaluated models using:
+  - **Mean Absolute Error (MAE):** ~25,000
+  - **Root Mean Squared Error (RMSE):** ~35,000
+- Gradient Boosting outperformed Linear Regression, capturing non-linear relationships better.
 
-Description: Contains property details like square footage, number of bedrooms, location, and price.
+---
 
-Models Applied
+## **Task 4: Auto Tagging Support Tickets Using LLM**
 
-Linear Regression
+### **Objective**
+Automatically tag support tickets into categories using a large language model (LLM).
 
-Gradient Boosting Regressor
+### **Dataset**
+- **Name:** Free-text Support Ticket Dataset
+- **Format:** Plain text / CSV
+- **Source:** https://www.kaggle.com/akashbommidi
 
-Key Results and Findings
+### **Models Applied**
+- Large Language Model (LLM) – Zero-shot, Few-shot, Fine-tuned approaches
 
-Preprocessed features including square footage, bedrooms, and encoded location.
+### **Key Results and Findings**
+- Used **prompt engineering** for zero-shot classification.
+- Applied **few-shot learning** to improve accuracy.
+- Compared zero-shot vs fine-tuned performance.
+- Produced **top 3 most probable tags** for each ticket.
 
-Visualized predicted vs actual prices.
+---
 
-Evaluation metrics:
+## **Task 5: End-to-End ML Pipeline with Scikit-learn Pipeline API**
 
-Mean Absolute Error (MAE): ~25,000
-
-Root Mean Squared Error (RMSE): ~35,000
-
-Gradient Boosting outperformed Linear Regression by capturing non-linear patterns.
-
-Task 4: End-to-End ML Pipeline with Scikit-learn Pipeline API
-Objective
-
+### **Objective**
 Build a reusable and production-ready machine learning pipeline for predicting customer churn.
 
-Dataset
+### **Dataset**
+- **Name:** Telco Churn Dataset
+- **Source:** Public telecom dataset
+- **Description:** Contains customer demographics, account details, and churn labels.
 
-Name: Telco Churn Dataset
+### **Models Applied**
+- Logistic Regression
+- Random Forest
 
-Models Applied
+### **Key Results and Findings**
+- Implemented preprocessing (scaling, encoding) inside a **Pipeline**.
+- Applied **GridSearchCV** for hyperparameter tuning.
+- Exported the final pipeline using **joblib** for production use.
+- Random Forest outperformed Logistic Regression on test data.
 
-Logistic Regression
+---
 
-Random Forest
+## **Task 6: Multimodal ML – Housing Price Prediction Using Images + Tabular Data**
 
-Key Results and Findings
+### **Objective**
+Predict housing prices using both structured tabular data and house images.
 
-Implemented scaling & encoding with the Pipeline API.
+### **Dataset**
+- **Name:** Housing Sales Dataset + Custom Image Dataset
+- **Source:** [Public dataset or custom-collected images](https://www.kaggle.com/datasets/harishkumardatalab/housing-price-prediction)
+- **Description:** Includes property details (square footage, bedrooms, location) and images of houses.
 
-Used GridSearchCV for hyperparameter tuning.
+### **Models Applied**
+- Convolutional Neural Networks (CNNs) for image feature extraction
+- Regression models combining image + tabular features
 
-Exported the pipeline with joblib for deployment.
+### **Key Results and Findings**
+- Extracted image embeddings using CNN.
+- Combined image features with tabular property data.
+- Trained regression models on the fused features.
+- Evaluated performance using:
+  - **Mean Absolute Error (MAE)**
+  - **Root Mean Squared Error (RMSE)**
+- Multimodal fusion significantly outperformed single-modality models.
 
-Achieved high accuracy while ensuring production readiness.
+---
 
-Task 5: Multimodal ML – Housing Price Prediction Using Images + Tabular Data
-Objective
-
-Predict housing prices using both structured data and house images.
-
-Dataset
-
-Name: Housing Sales Dataset + Custom Image Dataset (public/self-collected).
-
-Models Applied
-
-Convolutional Neural Networks (CNNs) for image features
-
-Fusion model (image + tabular features combined)
-
-Key Results and Findings
-
-Extracted image features with CNNs.
-
-Combined them with tabular features for training.
-
-Outperformed tabular-only models with better accuracy.
-
-Evaluation metrics:
-
-Mean Absolute Error (MAE): ~22,000
-
-Root Mean Squared Error (RMSE): ~30,000
-
-Task 6: Auto Tagging Support Tickets Using LLM
-Objective
-
-Automatically classify support tickets into categories using a Large Language Model (LLM).
-
-Dataset
-
-Name: Free-text Support Ticket Dataset
-
-Models Applied
-
-Pre-trained LLM with prompt engineering
-
-Zero-shot and Few-shot learning
-
-Key Results and Findings
-
-Compared zero-shot vs fine-tuned performance.
-
-Used few-shot examples to improve classification accuracy.
-
-Generated top 3 probable tags per ticket.
-
-Achieved strong results for real-world multi-class support ticket classification.
-
-Skills Gained Across Tasks
-
-Data Analysis & EDA → Pandas, Matplotlib, Seaborn
-
-Classification Models → Logistic Regression, Decision Tree
-
-Regression Models → Linear Regression, Gradient Boosting
-
-Pipelines → Scikit-learn Pipeline API, GridSearchCV, joblib
-
-Deep Learning → CNNs for images, multimodal fusion
-
-LLMs → Prompt engineering, zero-shot & few-shot classification
-
-Evaluation Metrics → Accuracy, ROC curve, Confusion Matrix, MAE, RMSE
+## **Skills Gained Across Tasks**
+- Data loading, inspection, and cleaning using Pandas
+- Exploratory Data Analysis (EDA) using Matplotlib & Seaborn
+- Binary classification using Logistic Regression & Decision Tree
+- Regression modeling using Linear Regression, Gradient Boosting, and Random Forest
+- LLM-based text classification (Zero-shot, Few-shot, Fine-tuning)
+- Multimodal learning: combining CNN image features with tabular data
+- Model evaluation using accuracy, ROC curve, confusion matrix, MAE, and RMSE
+- Production-ready ML pipelines with **Scikit-learn Pipeline API** and **joblib**
